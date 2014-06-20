@@ -7,11 +7,11 @@ describe BowlingScore do
   end
 
   it "should create a bowling scorer object" do
-    @bowling_score.should_not be_nil
+    expect(@bowling_score).not_to be_nil
   end
 
   it "should accept the result of a roll and return that score as the frame score" do
-    @bowling_score.next_score(1).should == true
-    @bowling_score.frame_score.should == 1
+    expect(@bowling_score.next_score(1)).to eq(true)
+    expect(@bowling_score.frame_score).to eq(1)
   end
 end
